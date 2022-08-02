@@ -7,7 +7,7 @@ pipeline {
         maven "M3"
     }
     stages { 
-        stage('Build’) {
+        stage('Build') {
             steps {
                 // Get some code from a GitHub repository
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/AmandeepKaur13/jenkins']]])
@@ -17,7 +17,7 @@ pipeline {
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
         }
-        stage('Build Docker Image’){
+        stage('Build Docker Image'){
            steps{
                script{
                     sh 'docker login -u=amandeep13kaur -p=Gullu@mullu13'
