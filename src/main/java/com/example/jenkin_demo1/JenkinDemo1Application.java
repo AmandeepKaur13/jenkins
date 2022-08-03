@@ -11,10 +11,5 @@ public class JenkinDemo1Application {
 		SpringApplication.run(JenkinDemo1Application.class, args);
 		System.out.println("heloo jenkin!!!!!!");
 	}
-	@GetMapping("/")
-	public String get()
-	{
-		return "Welcome In This Api";
-	}
 
 }
